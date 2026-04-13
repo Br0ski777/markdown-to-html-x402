@@ -29,6 +29,32 @@ Do NOT use for HTML to markdown -- use text_convert_html_to_markdown instead. Do
         },
         required: ["markdown"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "html": {
+              "type": "string",
+              "description": "Converted HTML output"
+            },
+            "inputLength": {
+              "type": "number",
+              "description": "Input markdown length"
+            },
+            "outputLength": {
+              "type": "number",
+              "description": "Output HTML length"
+            },
+            "isDocument": {
+              "type": "boolean",
+              "description": "Whether wrapped in full HTML document"
+            }
+          },
+          "required": [
+            "html",
+            "inputLength",
+            "outputLength"
+          ]
+        },
     },
   ],
 };
